@@ -1,0 +1,30 @@
+.muscle-group-img {
+  height: 200px;
+  width: 200px;
+}
+
+.cards-box {
+  min-width: 450px;
+  max-width: 1920px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  margin: 30px 25px 30px;
+  padding-top: 10px;
+}
+.main-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.title-muscle-group {
+}
+
+.card-muscle-group {
+    padding: 10px;
+  border: black 1px solid;
+  border-radius: 15px;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+}
