@@ -1,67 +1,45 @@
 import React, { useState } from "react";
+import ListExercises from "../ListExercises/ListExercises";
 import "./GroupMuscles.css";
 
 function GroupBreast({ addItem }) {
   const [arrExercisesBreast, setArrExercisesBreast] = useState([
     {
-      id: 1,
+      id: 16,
       name: "Жим лёжа",
+      repeat: 0,
+      approaches: 0,
     },
     {
-      id: 2,
+      id: 17,
       name: "Армейский жим",
+      repeat: 0,
+      approaches: 0,
     },
     {
-      id: 3,
+      id: 18,
       name: "Отжимания на брусьях",
+      repeat: 0,
+      approaches: 0,
     },
     {
-      id: 4,
+      id: 19,
       name: "Пуловеры прямыми руками",
+      repeat: 0,
+      approaches: 0,
     },
     {
-      id: 5,
+      id: 20,
       name: "Кроссоверы стоя",
+      repeat: 0,
+      approaches: 0,
     },
   ]);
-  const [numberApproaches, setNumberApproaches] = useState("");
-  const [numberRepeat, setNumberRepeat] = useState("");
-  const changeNumberApproaches = (e) => {
-    setNumberApproaches(e);
-  };
-  const changeNumberRepeat = (e) => {
-    setNumberRepeat(e);
-  };
+
   const listExercises = (
     <>
       {arrExercisesBreast.map((item, index) => (
-        <li className="li-name-exercises" key={index}>
-          {item.name}
-          {/* <label>
-            <input
-              onChange={changeNumberApproaches}
-              type="number"
-              placeholder="Количество подходов"
-              required
-            />
-          </label>
-          <label>
-            <input
-              onChange={changeNumberRepeat}
-              type="number"
-              placeholder="Количество повторений"
-              required
-            />
-          </label> */}
-          <button
-            type="button"
-            // disabled={!numberRepeat || !numberApproaches}
-            onClick={() => addItem(item)}
-            className="add-button"
-          >
-            добавить
-          </button>
-        </li>
+        <ListExercises item={item} index={index} addItem={addItem} />
       ))}
     </>
   );

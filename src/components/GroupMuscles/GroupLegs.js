@@ -1,10 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
+import ListExercises from "../ListExercises/ListExercises";
+import "./GroupMuscles.css";
 
 
-function GroupLegs() {
+function GroupLegs({ addItem }) {
+  const [arrExercisesBreast, setArrExercisesBreast] = useState([
+    {
+      id: 21,
+      name: "Приседания со штангой",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 22,
+      name: "Жим ногами в тренажёре",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 23,
+      name: "Гакк-приседания",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 24,
+      name: "Выпады с гантелями",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 25,
+      name: "Разгибание ног в тренажёре",
+      repeat: 0,
+      approaches: 0,
+    },
+  ]);
+
+  const listExercises = (
+    <>
+      {arrExercisesBreast.map((item, index) => (
+        <ListExercises item={item} index={index} addItem={addItem} />
+      ))}
+    </>
+  );
+
   return (
-    <div>
-        <p>GroupLegs</p>
+    <div className="box-exercises">
+      <h1 className="group-muscles-title">Ноги</h1>
+      <ul className="ul-list-exercises">{listExercises}</ul>
     </div>
   );
 }

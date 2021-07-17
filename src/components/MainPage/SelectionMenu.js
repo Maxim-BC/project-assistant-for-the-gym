@@ -12,7 +12,7 @@ import "./SelectionMenu.css";
 function MainPage() {
   return (
     <div className="main-box">
-      <div className="cards-box">
+      <div className="box-cards">
         <Link to={`/group_breast/`} className="card-muscle-group">
           <h2 className="title-muscle-group">Грудь</h2>
           <img src={Breast} className="muscle-group-img" alt="breast-img" />

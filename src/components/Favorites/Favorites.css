@@ -1,4 +1,5 @@
 .favorites-list {
+  margin: 5px 10px;
   margin-left: 0px;
   list-style-type: none;
   padding-left: 0px;
@@ -8,19 +9,58 @@
 }
 
 .favorites-point {
+  margin-bottom: 1px;
   display: flex;
   justify-content: flex-start;
   width: 90%;
-  border: black solid 1px;
-  align-items: center;
+  border: black solid 2px;
+  align-items: stretch;
+  height: 20%;
 }
 
 .favorites-name-point {
   width: 85%;
 }
 
+.favorites-box-btn {
+  display: flex;
+  justify-content: center;
+  border-left: 2px solid black;
+  align-items: center;
+}
+
 .favorites-btn-delete {
-  width: 15%;
-  height: 70%;
+  width: 100%;
+  height: 50%;
   cursor: pointer;
+}
+
+.favorites-box-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 5px;
+  border-left: 2px solid black;
+}
+
+.favorites-text-point,
+.favorites-number-point {
+  margin: 3px;
+  padding: 1px;
+}
+
+.favorites-number-point {
+  font-size: 20px;
+  font-weight: 600;
+  height: 100%;
+}
+
+.favorites-quantity-exercises {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.favorites-no-quantity-exercises {
+  font-size: 22px;
+  font-weight: 600;
 }

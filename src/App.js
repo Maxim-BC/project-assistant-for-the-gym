@@ -15,14 +15,16 @@ import "./App.css";
 function App() {
   const [arrayFavorites, setFavorites] = useState([]);
   const [quantityItemFavorites, setQuantityItemFavorites] = useState(0);
-  const addItem = (item) => {
+  const addItem = (item, numberApproaches, numberRepeat) => {
+    item.repeat = numberRepeat;
+    item.approaches = numberApproaches;
     const array = arrayFavorites;
     if (quantityItemFavorites < 20) {
       const newArray = [...array, item];
       setFavorites(newArray);
       setQuantityItemFavorites(quantityItemFavorites + 1);
       console.log(item);
-    } else return
+    } else return;
   };
   const deleteItem = (index) => {
     const array = arrayFavorites;

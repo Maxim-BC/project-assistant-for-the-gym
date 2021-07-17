@@ -3,7 +3,7 @@
   width: 200px;
 }
 
-.cards-box {
+.box-cards {
   min-width: 450px;
   max-width: 1920px;
   flex-wrap: wrap;
@@ -18,9 +18,11 @@
   justify-content: center;
 }
 .title-muscle-group {
+  color: white;
 }
 
 .card-muscle-group {
+  background-color: rgb(41, 37, 37);
     padding: 10px;
   border: black 1px solid;
   border-radius: 15px;

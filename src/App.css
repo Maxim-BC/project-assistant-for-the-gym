@@ -25,9 +25,13 @@
 }
 
 .favorites-box {
-  border: 1px solid black;
+  border: 1px solid #282c34;
   width: 35%;
   min-height: 500px;
+  height: 100vh;
+  border-left: 10px solid;
+  border-bottom: none;
+
 }
 
 .main-page {
