@@ -16,6 +16,7 @@
   border: black solid 2px;
   align-items: stretch;
   height: 20%;
+  min-width: 415px;
 }
 
 .favorites-name-point {
@@ -31,8 +32,19 @@
 
 .favorites-btn-delete {
   width: 100%;
-  height: 50%;
+  height: 40%;
   cursor: pointer;
+  background-color: rgb(212, 142, 13);
+  color: aliceblue;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: solid 1px white;
+  padding: 5px;
+}
+
+.favorites-btn-delete:hover {
+  background-color: rgb(212, 13, 13);
 }
 
 .favorites-box-number {

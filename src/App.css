@@ -25,13 +25,16 @@
 }
 
 .favorites-box {
-  border: 1px solid #282c34;
   width: 35%;
+  min-width: 426px;
   min-height: 500px;
   height: 100vh;
-  border-left: 10px solid;
   border-bottom: none;
+}
 
+.box-exercises {
+  border-left: 10px solid #282c34;
+  border-right: 20px solid #282c34;
 }
 
 .main-page {
@@ -39,5 +42,7 @@
 }
 
 .window-section {
+  border-left: 10px solid #282c34;
+  border-right: 20px solid #282c34;
   width: 65%;
 }

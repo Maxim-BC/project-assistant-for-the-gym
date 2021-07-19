@@ -12,21 +12,30 @@
   margin: 30px 25px 30px;
   padding-top: 10px;
 }
+
 .main-box {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 .title-muscle-group {
   color: white;
 }
 
 .card-muscle-group {
   background-color: rgb(41, 37, 37);
-    padding: 10px;
+  padding: 10px;
   border: black 1px solid;
   border-radius: 15px;
   margin: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.card-muscle-group:hover {
+  background-color: rgb(212, 142, 13);
+  border: rgb(209, 151, 44) 1px solid;
   text-decoration: none;
   color: black;
 }

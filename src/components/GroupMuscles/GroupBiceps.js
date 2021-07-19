@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ListExercises from "../ListExercises/ListExercises";
 import "./GroupMuscles.css";
-
+import { Link } from "react-router-dom";
 
 function GroupBiceps({ addItem }) {
   const [arrExercisesBreast, setArrExercisesBreast] = useState([
@@ -40,7 +40,7 @@ function GroupBiceps({ addItem }) {
   const listExercises = (
     <>
       {arrExercisesBreast.map((item, index) => (
-        <ListExercises item={item} index={index} addItem={addItem} />
+        <ListExercises item={item} key={index} addItem={addItem} />
       ))}
     </>
   );
@@ -49,6 +49,9 @@ function GroupBiceps({ addItem }) {
     <div className="box-exercises">
       <h1 className="group-muscles-title">Бицепс</h1>
       <ul className="ul-list-exercises">{listExercises}</ul>
+      <Link to={`/`} className="btn-back">
+        <p className="btn-back-text">Выбрать другую группу мышц</p>
+      </Link>
     </div>
   );
 }

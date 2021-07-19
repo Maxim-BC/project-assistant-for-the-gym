@@ -25,7 +25,7 @@ function Favorites({ arrayFavorites, quantityItemFavorites, deleteItem }) {
                 className="favorites-btn-delete"
                 onClick={() => deleteItem(index)}
               >
-                убрать
+                удалить
               </button>
             </div>
           </li>
