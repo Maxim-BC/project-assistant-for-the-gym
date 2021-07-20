@@ -34,6 +34,7 @@
 }
 
 .card-muscle-group:hover {
+  transition-duration: 1s;
   background-color: rgb(212, 142, 13);
   border: rgb(209, 151, 44) 1px solid;
   text-decoration: none;

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../GroupMuscles/GroupMuscles.css";
 
 function ListExercises({ item, index, addItem }) {
-  const [numberApproaches, setNumberApproaches] = useState();
-  const [numberRepeat, setNumberRepeat] = useState();
+  const [numberApproaches, setNumberApproaches] = useState("");
+  const [numberRepeat, setNumberRepeat] = useState("");
 
   const changeNumberApproaches = (e) => {
     if (199 > e.target.value && e.target.value > 0 && e.target.value !== "-") {
@@ -44,14 +44,16 @@ function ListExercises({ item, index, addItem }) {
           required
         />
       </label>
-      <button
-        type="button"
-        disabled={!numberRepeat || !numberApproaches}
-        onClick={() => addItem(item, numberRepeat, numberApproaches)}
-        className="add-button"
-      >
-        добавить
-      </button>
+      <div className="list-exercises-box-btn-add">
+        <button
+          type="button"
+          disabled={!numberRepeat || !numberApproaches}
+          onClick={() => addItem(item, numberRepeat, numberApproaches)}
+          className="add-button"
+        >
+          добавить
+        </button>
+      </div>
     </li>
   );
 }

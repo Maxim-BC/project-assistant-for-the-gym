@@ -44,6 +44,7 @@
 }
 
 .favorites-btn-delete:hover {
+  transition-duration: 1s;
   background-color: rgb(212, 13, 13);
 }
 

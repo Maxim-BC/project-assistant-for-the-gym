@@ -74,6 +74,9 @@ function App() {
             />
           </aside>
         </main>
+        <footer className="footer-box">
+          <h3 className="contacts-h3">Контакты</h3>
+        </footer>
       </div>
     </BrowserRouter>
   );

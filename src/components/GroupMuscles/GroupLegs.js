@@ -4,7 +4,7 @@ import "./GroupMuscles.css";
 import { Link } from "react-router-dom";
 
 function GroupLegs({ addItem }) {
-  const [arrExercisesBreast, setArrExercisesBreast] = useState([
+  const [arrExercisesBreast] = useState([
     {
       id: 21,
       name: "Приседания со штангой",
@@ -48,7 +48,7 @@ function GroupLegs({ addItem }) {
   return (
     <div className="box-exercises">
       <h1 className="group-muscles-title">Ноги</h1>
-      <ul className="ul-list-exercises">{listExercises}</ul>
+      <ul className="list-exercises-ul">{listExercises}</ul>
       <Link to={`/`} className="btn-back">
         <p className="btn-back-text">Выбрать другую группу мышц</p>
       </Link>

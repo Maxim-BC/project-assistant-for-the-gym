@@ -4,7 +4,7 @@ import "./GroupMuscles.css";
 import { Link } from "react-router-dom";
 
 function GroupShoulders({ addItem }) {
-  const [arrExercisesBreast, setArrExercisesBreast] = useState([
+  const [arrExercisesBreast] = useState([
     {
       id: 26,
       name: "Жим гантелей сидя",

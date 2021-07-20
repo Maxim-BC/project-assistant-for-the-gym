@@ -4,7 +4,7 @@ import "./GroupMuscles.css";
 import { Link } from "react-router-dom";
 
 function GroupBiceps({ addItem }) {
-  const [arrExercisesBreast, setArrExercisesBreast] = useState([
+  const [arrExercisesBreast] = useState([
     {
       id: 11,
       name: "Подъём штанги на бицепс стоя",
@@ -48,7 +48,7 @@ function GroupBiceps({ addItem }) {
   return (
     <div className="box-exercises">
       <h1 className="group-muscles-title">Бицепс</h1>
-      <ul className="ul-list-exercises">{listExercises}</ul>
+      <ul className="list-exercises-ul">{listExercises}</ul>
       <Link to={`/`} className="btn-back">
         <p className="btn-back-text">Выбрать другую группу мышц</p>
       </Link>
