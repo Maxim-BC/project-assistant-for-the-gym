@@ -9,6 +9,7 @@ import GroupAbs from "./components/GroupMuscles/GroupAbs";
 import GroupShoulders from "./components/GroupMuscles/GroupShoulders";
 import GroupTriceps from "./components/GroupMuscles/GroupTriceps";
 import Favorites from "./components/Favorites/Favorites";
+import Workouts from "./components/Workouts/Workouts";
 
 import "./App.css";
 
@@ -65,6 +66,9 @@ function App() {
             <Route path="/group_back/">
               <GroupBack addItem={addItem} deleteItem={deleteItem} />
             </Route>
+            <Route path={`/workouts/:id`}>
+              <Workouts addItem={addItem} deleteItem={deleteItem} />
+            </Route>
           </section>
           <aside className="favorites-box">
             <Favorites
@@ -76,6 +80,12 @@ function App() {
         </main>
         <footer className="footer-box">
           <h3 className="contacts-h3">Контакты</h3>
+          <a
+            className="footer-link-instagram"
+            href="https://www.instagram.com/maxim_lang_1990/"
+          >
+            https://www.instagram.com/maxim_lang_1990/
+          </a>
         </footer>
       </div>
     </BrowserRouter>

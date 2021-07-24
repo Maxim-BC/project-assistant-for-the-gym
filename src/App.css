@@ -1,11 +1,15 @@
+/* * {
+  border: 6px solid red;
+} */
+
 .App {
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -15,7 +19,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 15vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,30 +33,35 @@
   width: 35%;
   min-width: 426px;
   min-height: 500px;
-  height: 100vh;
+  height: 100%;
   border-bottom: none;
 }
 
 .main-page {
   display: flex;
+  border-right: 10px solid #282c34;
+  border-left: 10px solid #282c34;
 }
 
 .window-section {
   min-width: 350px;
   padding: 10px;
-  border-left: 10px solid #282c34;
   border-right: 20px solid #282c34;
   width: 65%;
 }
 
 .footer-box {
   background-color: #282c34;
-  width: 100vw;
-  height: 150px;
+  height: 100px;
 }
 
 .contacts-h3 {
   padding-top: 15px;
   color: white;
   margin: 0;
+}
+
+.footer-link-instagram {
+  font-size: 16px;
+  color: rgb(149, 149, 255);
 }

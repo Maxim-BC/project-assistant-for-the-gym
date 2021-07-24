@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Favorites.css";
+import { registerList } from "../../api";
 
 function Favorites({ arrayFavorites, quantityItemFavorites, deleteItem }) {
+  const [idList, setIdList] = useState("");
   const [tittle, setTittle] = useState("");
   const resultList =
     quantityItemFavorites === 0 ? (
@@ -35,14 +38,27 @@ function Favorites({ arrayFavorites, quantityItemFavorites, deleteItem }) {
     );
   const createList = () => {
     let result = arrayFavorites.map((item) => item);
-    console.log (result)
-    // registerList(tittle, result)
-    //   .then
-      // (resBody) => this.setState({ idList: resBody.id }),
-      // this.props.isListCreated()
-      // ()
-      // .catch((err) => console.log(`Ошибка: ${err}`));
+    registerList(tittle, result)
+      .then((resBody) => {
+        setIdList(resBody.id);
+        console.log(resBody);
+      })
+      .catch((err) => console.error(err));
   };
+  const linkAndBtnSaveList =
+    idList === "" ? (
+      <button
+        disabled={!tittle || quantityItemFavorites === 0}
+        onClick={createList}
+        type="button"
+        className="favorites-btn-save"
+      >
+        Сохранить тренировку
+      </button>
+    ) : (
+      <Link to={`/workouts/${idList}`}>Перейти к списку.</Link>
+    );
+
   const changeNameList = (evt) => {
     setTittle(evt.target.value);
   };
@@ -54,7 +70,7 @@ function Favorites({ arrayFavorites, quantityItemFavorites, deleteItem }) {
       </p>
       <label>
         <input
-          disabled={!tittle || quantityItemFavorites === 0}
+          disabled={quantityItemFavorites === 0}
           onChange={changeNameList}
           type="text"
           value={tittle}
@@ -63,9 +79,7 @@ function Favorites({ arrayFavorites, quantityItemFavorites, deleteItem }) {
         />
       </label>
       <ul className="favorites-list">{resultList}</ul>
-      <button onClick={createList} type="button" className="favorites-btn-save">
-        Сохранить тренировку
-      </button>
+      {linkAndBtnSaveList}
     </div>
   );
 }

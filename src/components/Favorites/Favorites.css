@@ -19,6 +19,9 @@
   min-width: 415px;
 }
 
+.favorites-btn-save {
+  margin: 15px
+}
 .favorites-name-point {
   width: 85%;
 }
