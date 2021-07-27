@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 .favorites-point {
@@ -20,7 +21,33 @@
 }
 
 .favorites-btn-save {
-  margin: 15px
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgb(52, 133, 72);
+  width: 150px;
+  height: 50px;
+  border: rgb(212, 13, 13);
+  cursor: pointer;
+  border-radius: 10px;
+  border: solid 1px rgb(255, 255, 255);
+  color: aliceblue;
+  padding: 5px;
+  margin: 5px;
+  margin: 15px;
+}
+.favorites-input-name {
+  text-align: center;
+  width: 200px;
+  height: 30px;
+}
+.favorites-btn-save:hover {
+  transition-duration: 1s;
+  background-color: rgb(3, 189, 50);
+}
+.favorites-btn-save:disabled {
+  color: rgba(0, 0, 0, 0.281);
+  background-color: rgba(212, 159, 13, 0.466);
+  border: none;
 }
 .favorites-name-point {
   width: 85%;
@@ -29,7 +56,6 @@
 .favorites-box-btn {
   display: flex;
   justify-content: center;
-  border-left: 2px solid black;
   align-items: center;
 }
 
@@ -79,4 +105,38 @@
 .favorites-no-quantity-exercises {
   font-size: 22px;
   font-weight: 600;
+}
+
+.favorites-link-workouts {
+  margin-top: 15px;
+}
+
+.favorites-box-link-btn-save-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorites-link-workouts {
+  margin: 20px 10px 20px 10px;
+  border-radius: 15px;
+  width: 80%;
+  min-width: 300px;
+  max-width: 350px;
+  height: 40px;
+  text-decoration: none;
+  background-color: rgb(212, 132, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  font-weight: 600
+}
+
+.favorites-link-workouts:hover {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
 }

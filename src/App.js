@@ -10,11 +10,11 @@ import GroupShoulders from "./components/GroupMuscles/GroupShoulders";
 import GroupTriceps from "./components/GroupMuscles/GroupTriceps";
 import Favorites from "./components/Favorites/Favorites";
 import Workouts from "./components/Workouts/Workouts";
-
+import Icon_instagram from "./components/icon_img/Icon_instagram.png";
 import "./App.css";
 
 function App() {
-  const [arrayFavorites, setFavorites] = useState([]);
+  const [arrayFavorites, setArrayFavorites] = useState([]);
   const [quantityItemFavorites, setQuantityItemFavorites] = useState(0);
   const addItem = (item, numberApproaches, numberRepeat) => {
     item.repeat = numberRepeat;
@@ -22,7 +22,7 @@ function App() {
     const array = arrayFavorites;
     if (quantityItemFavorites < 20) {
       const newArray = [...array, item];
-      setFavorites(newArray);
+      setArrayFavorites(newArray);
       setQuantityItemFavorites(quantityItemFavorites + 1);
       console.log(item);
     } else return;
@@ -30,15 +30,19 @@ function App() {
   const deleteItem = (index) => {
     const array = arrayFavorites;
     array.splice(index, 1);
-    setFavorites(array);
+    setArrayFavorites(array);
     setQuantityItemFavorites(quantityItemFavorites - 1);
   };
+  const deleteList = () => {
+    setArrayFavorites([]);
+    setQuantityItemFavorites(0);
+  };
+
   return (
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
           <h1>Assistant for the gym</h1>
-          {/* <img src={headerLogo} className="header-img" alt="logo" /> */}
         </header>
         <main className="main-page">
           <section className="window-section">
@@ -75,17 +79,26 @@ function App() {
               deleteItem={deleteItem}
               arrayFavorites={arrayFavorites}
               quantityItemFavorites={quantityItemFavorites}
+              deleteList={deleteList}
             />
           </aside>
         </main>
         <footer className="footer-box">
-          <h3 className="contacts-h3">Контакты</h3>
-          <a
-            className="footer-link-instagram"
-            href="https://www.instagram.com/maxim_lang_1990/"
-          >
-            https://www.instagram.com/maxim_lang_1990/
-          </a>
+          <div className="footer-contact-box">
+            <h2 className="contacts-h2">Контакты:</h2>
+            Instagram:
+            <a
+              className="footer-link-instagram"
+              href="https://www.instagram.com/maxim_lang_1990/"
+            >
+              <img
+                src={Icon_instagram}
+                className="footer-icon-instagram"
+                alt="icon_instagram"
+              />{" "}
+              https://www.instagram.com/maxim_lang_1990/
+            </a>
+          </div>
         </footer>
       </div>
     </BrowserRouter>

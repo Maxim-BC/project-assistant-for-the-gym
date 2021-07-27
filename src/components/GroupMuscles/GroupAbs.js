@@ -35,6 +35,36 @@ function GroupAbs({ addItem }) {
       repeat: 0,
       approaches: 0,
     },
+    {
+      id: 6,
+      name: "Скручивания с поднятыми ногами",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 7,
+      name: "«Велосипед»",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 8,
+      name: "«Планка»",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 9,
+      name: "«Вакуум»",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 10,
+      name: "Подъем ног лежа на боку",
+      repeat: 0,
+      approaches: 0,
+    },
   ]);
 
   const listExercises = (
@@ -49,8 +79,8 @@ function GroupAbs({ addItem }) {
     <div className="box-exercises">
       <h1 className="group-muscles-title">Пресс</h1>
       <ul className="list-exercises-ul">{listExercises}</ul>
-      <Link to={`/`} className="btn-back">
-        <p className="btn-back-text">Выбрать другую группу мышц</p>
+      <Link to={`/`} className="group-muscles-btn-back">
+        <p className="group-muscles-btn-back-text">Выбрать другую группу мышц</p>
       </Link>
     </div>
   );

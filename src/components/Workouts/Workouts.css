@@ -1,4 +1,83 @@
 .title-workouts {
-    color:white;
-    font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-size: 26px;
+}
+.workouts-btn-back {
+  min-width: 280px;
+  cursor: pointer;
+  margin: 20px 10px 20px 10px;
+  border-radius: 15px;
+  width: 70%;
+  min-width: 350px;
+  max-width: 400px;
+  height: 40px;
+  text-decoration: none;
+  background-color: rgb(212, 132, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workouts-btn-back-text {
+  border: none;
+  background-color: rgb(212, 132, 3);
+  color: white;
+  font-size: 20px;
+  height: 22px;
+  vertical-align: middle;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workouts-btn-back:hover .workouts-btn-back-text {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 166, 0);
+  transition: 1s;
+}
+
+.workouts-btn-back:hover {
+  transition: 1s;
+  background-color: rgb(255, 166, 0);
+}
+
+.workouts-box-btn-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.workouts-name-exercise {
+  margin: 5px;
+}
+
+.workouts-list-exercises-label-text {
+  margin: 5px;
+}
+
+.workouts-list-exercises-li {
+  margin: 3px;
+  border: 1px solid;
+  border-radius: 15px;
+}
+
+.workouts-ul-list {
+  margin: auto;
+  list-style-type: none;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.4fr));
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  font-weight: 600;
+  list-style-type: none;
+}
+
+.workouts-box {
+  width: 90%;
 }

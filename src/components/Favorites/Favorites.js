@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import "./Favorites.css";
 import { registerList } from "../../api";
 
-function Favorites({ arrayFavorites, quantityItemFavorites, deleteItem }) {
+function Favorites({
+  arrayFavorites,
+  quantityItemFavorites,
+  deleteItem,
+  deleteList,
+}) {
   const [idList, setIdList] = useState("");
   const [tittle, setTittle] = useState("");
   const resultList =
@@ -36,6 +41,10 @@ function Favorites({ arrayFavorites, quantityItemFavorites, deleteItem }) {
         );
       })
     );
+  const deleteListAndNameList = (evt) => {
+    setTittle("");
+    deleteList();
+  };
   const createList = () => {
     let result = arrayFavorites.map((item) => item);
     registerList(tittle, result)
@@ -45,6 +54,21 @@ function Favorites({ arrayFavorites, quantityItemFavorites, deleteItem }) {
       })
       .catch((err) => console.error(err));
   };
+  const createNewList = () => {
+    setIdList("");
+  };
+  const btnAddNewWorkouts =
+    idList === "" ? (
+      ""
+    ) : (
+      <button
+        onClick={createNewList}
+        type="button"
+        className="favorites-btn-save"
+      >
+        Создать новую тренировку
+      </button>
+    );
   const linkAndBtnSaveList =
     idList === "" ? (
       <button
@@ -56,9 +80,14 @@ function Favorites({ arrayFavorites, quantityItemFavorites, deleteItem }) {
         Сохранить тренировку
       </button>
     ) : (
-      <Link to={`/workouts/${idList}`}>Перейти к списку.</Link>
+      <Link
+        onClick={deleteListAndNameList}
+        className="favorites-link-workouts"
+        to={`/workouts/${idList}`}
+      >
+        Перейти к вашей тренировке
+      </Link>
     );
-
   const changeNameList = (evt) => {
     setTittle(evt.target.value);
   };
@@ -75,11 +104,14 @@ function Favorites({ arrayFavorites, quantityItemFavorites, deleteItem }) {
           type="text"
           value={tittle}
           placeholder="Новая тренировка"
-          className="favorites__name"
+          className="favorites-input-name"
         />
       </label>
       <ul className="favorites-list">{resultList}</ul>
-      {linkAndBtnSaveList}
+      <div className="favorites-box-link-btn-save-link">
+        {linkAndBtnSaveList}
+        {btnAddNewWorkouts}
+      </div>
     </div>
   );
 }

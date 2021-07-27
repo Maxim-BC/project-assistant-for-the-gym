@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-height: 200px;
 }
 
 .list-exercises-li-name {
@@ -72,29 +73,35 @@
   font-size: 30px;
   margin-bottom: 10px;
   margin-left: 25px;
+  margin-top: 10px;
 }
 
 .box-exercises {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+  max-height: calc(100vh - 100px);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-.btn-back-text {
+.group-muscles-btn-back-text {
   color: white;
   font-size: 20px;
-  margin: 2px;
-  padding: 2px;
   height: 22px;
   vertical-align: middle;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .list-exercises-input {
   width: 30%;
 }
 
-.btn-back {
+.group-muscles-btn-back {
   margin: 20px 10px 20px 10px;
   border-radius: 15px;
   width: 80%;
@@ -103,15 +110,18 @@
   height: 40px;
   text-decoration: none;
   background-color: rgb(212, 132, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn-back:hover .btn-back-text {
+.group-muscles-btn-back:hover .btn-back-text {
   font-size: 22px;
   font-weight: 600;
   color: rgb(255, 255, 255);
 }
 
-.btn-back:hover {
-  transition-duration: 1s;
+.group-muscles-btn-back:hover {
+  transition: 1s;
   background-color: rgb(255, 166, 0);
 }

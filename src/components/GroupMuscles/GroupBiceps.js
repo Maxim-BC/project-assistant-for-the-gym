@@ -6,32 +6,62 @@ import { Link } from "react-router-dom";
 function GroupBiceps({ addItem }) {
   const [arrExercisesBreast] = useState([
     {
-      id: 11,
+      id: 26,
       name: "Подъём штанги на бицепс стоя",
       repeat: 0,
       approaches: 0,
     },
     {
-      id: 12,
+      id: 27,
       name: "Подъём гантелей «молот»",
       repeat: 0,
       approaches: 0,
     },
     {
-      id: 13,
-      name: "Подъём штанги/гантелей в скамье Скотта",
+      id: 28,
+      name: "Подъём штанги/гантелей в скамье «Скотта»",
       repeat: 0,
       approaches: 0,
     },
     {
-      id: 14,
+      id: 29,
       name: "Подъёмы на бицепс в наклоне",
       repeat: 0,
       approaches: 0,
     },
     {
-      id: 15,
+      id: 30,
       name: "Подъёмы на блоке и в тренажёрах",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 31,
+      name: "Подъёмы гантелей на наклонной скамье",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 32,
+      name: "Подъёмы гантелей с супинацией",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 33,
+      name: "Подъёмы гантелей с эспандером",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 34,
+      name: "Сгибания на бицепс в кроссовере",
+      repeat: 0,
+      approaches: 0,
+    },
+    {
+      id: 35,
+      name: "Подтягивания обратным хватом",
       repeat: 0,
       approaches: 0,
     },
@@ -49,8 +79,8 @@ function GroupBiceps({ addItem }) {
     <div className="box-exercises">
       <h1 className="group-muscles-title">Бицепс</h1>
       <ul className="list-exercises-ul">{listExercises}</ul>
-      <Link to={`/`} className="btn-back">
-        <p className="btn-back-text">Выбрать другую группу мышц</p>
+      <Link to={`/`} className="group-muscles-btn-back">
+        <p className="group-muscles-btn-back-text">Выбрать другую группу мышц</p>
       </Link>
     </div>
   );
