@@ -26,7 +26,7 @@ connection.connect((err) => {
   }
 });
 
-app.get("/workouts/:id", (req, res) => {
+app.get("/api/workouts/:id", (req, res) => {
   const id = parseInt(req.params.id);
   connection.query(
     `select workout.title, name_exercise, approaches_exercise, repeat_exercise 
@@ -41,7 +41,7 @@ app.get("/workouts/:id", (req, res) => {
   );
 });
 
-app.post("/workouts/create", (req, res) => {
+app.post("/api/workouts/create", (req, res) => {
   const myQueryWorkout = `INSERT INTO workout
   (title)
 VALUES
