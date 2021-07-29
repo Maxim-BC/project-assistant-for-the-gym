@@ -3,13 +3,16 @@ const app = express();
 const cors = require("cors");
 const mysql = require("mysql");
 const path = require("path");
-const connection = mysql.createConnection({
-  host: "locaasdflhost",
+
+const mysqlConnectionConfig = process.env.JAWSDB_URL ?? {
+  host: "localhost",
   port: 3306,
   user: "root",
   password: "Teragolf1645",
   database: "assistant_for_gym",
-});
+};
+
+const connection = mysql.createConnection(mysqlConnectionConfig);
 
 app.use(express.json());
 app.use(cors());
