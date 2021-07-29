@@ -133,7 +133,7 @@ html {
     padding: 5px;
     border-right: 10px #282c34 ridge;
     background-color: white;
-    width: 70%;
+    width: 85%;
   }
   .main-page {
     background-color: white;
@@ -147,8 +147,8 @@ html {
   .favorites-box {
     background-color: white;
     padding-left: 3px;
-    width: 30%;
-    min-width: 226px;
+    width: 10%;
+    min-width: 50px;
     min-height: 250px;
     height: 100%;
     border-bottom: none;

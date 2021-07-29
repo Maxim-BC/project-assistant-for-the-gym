@@ -23,25 +23,25 @@ function MobileFavorites({
   };
   const resultList =
     quantityItemFavorites === 0 ? (
-      <p className="favorites-no-quantity-exercises">
+      <p className="mobile-favorites-no-quantity-exercises">
         Вы еще не выбрали упражнения
       </p>
     ) : (
       arrayFavorites.map((item, index) => {
         return (
-          <li className="favorites-point" key={index}>
-            <p className="favorites-name-point">{item.name}</p>
-            <div className="favorites-box-number">
-              <p className="favorites-text-point">Кол-во подходов:</p>
-              <p className="favorites-number-point">{item.repeat}</p>
+          <li className="mobile-favorites-point" key={index}>
+            <p className="mobile-favorites-name-point">{item.name}</p>
+            <div className="mobile-favorites-box-number">
+              <p className="mobile-favorites-text-point">Кол-во подходов:</p>
+              <p className="mobile-favorites-number-point">{item.repeat}</p>
             </div>
-            <div className="favorites-box-number">
-              <p className="favorites-text-point">Кол-во повторений:</p>
-              <p className="favorites-number-point">{item.approaches}</p>
+            <div className="mobile-favorites-box-number">
+              <p className="mobile-favorites-text-point">Кол-во повторений:</p>
+              <p className="mobile-favorites-number-point">{item.approaches}</p>
             </div>
-            <div className="favorites-box-btn">
+            <div className="mobile-favorites-box-btn">
               <button
-                className="favorites-btn-delete"
+                className="mobile-favorites-btn-delete"
                 onClick={() => deleteItem(index)}
               >
                 удалить
@@ -74,7 +74,7 @@ function MobileFavorites({
       <button
         onClick={createNewList}
         type="button"
-        className="favorites-btn-save"
+        className="mobile-favorites-btn-save"
       >
         Создать новую тренировку
       </button>
@@ -85,14 +85,14 @@ function MobileFavorites({
         disabled={!tittle || quantityItemFavorites === 0}
         onClick={createList}
         type="button"
-        className="favorites-btn-save"
+        className="mobile-favorites-btn-save"
       >
         Сохранить тренировку
       </button>
     ) : (
       <Link
         onClick={deleteListAndNameList}
-        className="favorites-link-workouts"
+        className="mobile-favorites-link-workouts"
         to={`/workouts/${idList}`}
       >
         Перейти к вашей тренировке
@@ -101,15 +101,12 @@ function MobileFavorites({
   const changeNameList = (evt) => {
     setTittle(evt.target.value);
   };
-  return (
-    <>
-      <button onClick={() => openMenuSaveList()} className={btnOpenSaveList}>
-        <p>&#9776;</p>
-        {quantityItemFavorites}
-      </button>
-      <div className={showSaveList}>
+
+  const windowMobileFavorites =
+    btnOpenSaveList === "hide" ? (
+      <div className="mobile-favorites">
         <h2>Ваша тренировка</h2>
-        <p className="favorites-quantity-exercises">
+        <p className="mobile-favorites-quantity-exercises">
           Количество упражнений: {quantityItemFavorites}
         </p>
         <label>
@@ -119,11 +116,11 @@ function MobileFavorites({
             type="text"
             value={tittle}
             placeholder="Новая тренировка"
-            className="favorites-input-name"
+            className="mobile-favorites-input-name"
           />
         </label>
-        <ul className="favorites-list">{resultList}</ul>
-        <div className="favorites-box-link-btn-save-link">
+        <ul className="mobile-favorites-list">{resultList}</ul>
+        <div className="mobile-favorites-box-link-btn-save-link">
           {linkAndBtnSaveList}
           {btnAddNewWorkouts}
           <button onClick={() => cancel()} type="button" className="show-save">
@@ -131,6 +128,17 @@ function MobileFavorites({
           </button>
         </div>
       </div>
+    ) : (
+      ""
+    );
+
+  return (
+    <>
+      <button onClick={() => openMenuSaveList()} className={btnOpenSaveList}>
+        <p>&#9776;</p>
+        {quantityItemFavorites}
+      </button>
+      {windowMobileFavorites}
     </>
   );
 }
