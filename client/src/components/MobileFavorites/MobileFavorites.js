@@ -12,14 +12,12 @@ function MobileFavorites({
   const [idList, setIdList] = useState("");
   const [tittle, setTittle] = useState("");
   const [btnOpenSaveList, setBtnOpenSaveList] = useState("show");
-  const [showSaveList, setShowSaveList] = useState("hide");
+
   const openMenuSaveList = () => {
     setBtnOpenSaveList("hide");
-    setShowSaveList("show");
   };
   const cancel = () => {
     setBtnOpenSaveList("show");
-    setShowSaveList("hide");
   };
   const resultList =
     quantityItemFavorites === 0 ? (
@@ -123,7 +121,11 @@ function MobileFavorites({
         <div className="mobile-favorites-box-link-btn-save-link">
           {linkAndBtnSaveList}
           {btnAddNewWorkouts}
-          <button onClick={() => cancel()} type="button" className="show-save">
+          <button
+            onClick={() => cancel()}
+            type="button"
+            className="mobile-favorites-back"
+          >
             Назад
           </button>
         </div>

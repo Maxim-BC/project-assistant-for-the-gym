@@ -1,4 +1,5 @@
 .show {
+  cursor:pointer;
   width: 40px;
   height: 60px;
   opacity: 0.8;
@@ -11,10 +12,24 @@
   top: 250px;
   position: fixed;
   display: block;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .hide {
   display: none;
 }
+
+.mobile-favorites-back {
+  width: 30%;
+  cursor: pointer;
+  font-size: 17px;
+  background-color:rgb(212, 142, 13);
+  color: white;
+  border: rgb(212, 142, 13) 1px solid;
+  border-radius: 10px;
+}
+
 .mobile-favorites {
   box-sizing: border-box;
   border: 1px solid rgba(0, 8, 7);
@@ -44,19 +59,20 @@
   margin-bottom: 1px;
   display: flex;
   justify-content: flex-start;
-  width: 70%;
-  border: black solid 1px;
+  width: 90%;
+  border: black solid 2px;
   align-items: stretch;
   height: 20%;
   min-width: 215px;
+  font-weight: 600;
 }
 
 .mobile-favorites-btn-save {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
   background-color: rgb(52, 133, 72);
-  width: 90px;
-  height: 30px;
+  width: 120px;
+  height: 40px;
   border: rgb(212, 13, 13);
   cursor: pointer;
   border-radius: 10px;
@@ -85,6 +101,7 @@
 }
 
 .mobile-favorites-box-btn {
+  border-left: 2px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,7 +180,7 @@
   justify-content: center;
   font-size: 12px;
   color: rgb(255, 255, 255);
-  font-weight: 600
+  font-weight: 600;
 }
 
 .mobile-favorites-link-workouts:hover {
