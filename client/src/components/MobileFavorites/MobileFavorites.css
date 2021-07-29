@@ -1,0 +1,17 @@
+.show {
+    width: 40px;
+    height: 60px;
+    opacity: 0.8;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: solid 1px rgb(41, 105, 207);
+    color: rgb(41, 105, 207);
+    right: 3px;
+    top: 170px;
+    position: fixed;
+    display: block;
+  }
+  .hide {
+    display: none;
+  }

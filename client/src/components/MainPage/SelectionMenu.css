@@ -40,3 +40,29 @@
   text-decoration: none;
   color: black;
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .muscle-group-img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .box-cards {
+    height: 100%;
+    min-width: 150px;
+    max-width: 600px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px 10px;
+  }
+  .card-muscle-group {
+    background-color: rgb(41, 37, 37);
+    padding: 5px;
+    border: black 1px solid;
+    border-radius: 15px;
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+  }
+}

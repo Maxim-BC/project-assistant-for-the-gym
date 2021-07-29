@@ -13,15 +13,15 @@ function MainPage() {
   return (
     <div className="main-box">
       <div className="box-cards">
-        <Link to={`/group_breast/`} className="card-muscle-group">
+        <Link to={`/group-breast/`} className="card-muscle-group">
           <h2 className="title-muscle-group">Грудь</h2>
           <img src={Breast} className="muscle-group-img" alt="breast-img" />
         </Link>
-        <Link to={`/group_back/`} className="card-muscle-group">
+        <Link to={`/group-back/`} className="card-muscle-group">
           <h2 className="title-muscle-group">Спина</h2>
           <img src={Back} className="muscle-group-img" alt="back-img" />
         </Link>
-        <Link to={`/group_shoulders/`} className="card-muscle-group">
+        <Link to={`/group-shoulders/`} className="card-muscle-group">
           <h2 className="title-muscle-group">Плечи</h2>
           <img
             src={Shoulders}
@@ -29,19 +29,19 @@ function MainPage() {
             alt="shoulders-img"
           />
         </Link>
-        <Link to={`/group_biceps/`} className="card-muscle-group">
+        <Link to={`/group-biceps/`} className="card-muscle-group">
           <h2 className="title-muscle-group">Бицепс</h2>
           <img src={Biceps} className="muscle-group-img" alt="biceps-img" />
         </Link>
-        <Link to={`/group_triceps/`} className="card-muscle-group">
+        <Link to={`/group-triceps/`} className="card-muscle-group">
           <h2 className="title-muscle-group">Трицепс</h2>
           <img src={Triceps} className="muscle-group-img" alt="triceps-img" />
         </Link>
-        <Link to={`/group_abs/`} className="card-muscle-group">
+        <Link to={`/group-abs/`} className="card-muscle-group">
           <h2 className="title-muscle-group">Пресс</h2>
           <img src={Abs} className="muscle-group-img" alt="abs-img" />
         </Link>
-        <Link to={`/group_legs/`} className="card-muscle-group">
+        <Link to={`/group-legs/`} className="card-muscle-group">
           <h2 className="title-muscle-group">Ноги</h2>
           <img src={Legs} className="muscle-group-img" alt="legs-img" />
         </Link>

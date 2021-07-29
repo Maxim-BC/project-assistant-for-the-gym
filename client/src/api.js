@@ -1,6 +1,6 @@
 export async function registerList(nameList, exercises) {
   console.log(nameList, exercises);
-  const response = await fetch("http://localhost:4000/workouts/create", {
+  const response = await fetch("/workouts/create", {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
@@ -15,7 +15,7 @@ export async function registerList(nameList, exercises) {
 }
 
 export async function getList(id) {
-  const response = await fetch(`http://localhost:4000/workouts/${id}`);
+  const response = await fetch(`/workouts/${id}`);
   const body = await response.json();
   return body;
 }

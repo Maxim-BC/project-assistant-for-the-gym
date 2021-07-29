@@ -13,7 +13,7 @@ function Workouts() {
       getList(params.id).then((data) => {
         if (data[0] === undefined) {
           setErrorGetList("Неправильная ссылка или ID тренировки");
-          console.error("Incorrect link or request ID")
+          console.error("Incorrect link or request ID");
         } else {
           setExercises(data);
           setTitle(data[0].title);
