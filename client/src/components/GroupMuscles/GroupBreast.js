@@ -108,7 +108,7 @@ function GroupBreast({ addItem }) {
   return (
     <div className="box-exercises">
       <h4 className="group-muscles-title">Грудь</h4>
-      <ul className="list-exercises-ul">{listExercises}</ul>
+      <div className="box-list-exercises-ul"><ul className="list-exercises-ul">{listExercises}</ul></div>
       <Link to={`/`} className="group-muscles-btn-back">
         <p className="group-muscles-btn-back-text">Выбрать другую группу мышц</p>
       </Link>

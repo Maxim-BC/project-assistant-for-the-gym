@@ -78,7 +78,7 @@ function GroupBiceps({ addItem }) {
   return (
     <div className="box-exercises">
       <h1 className="group-muscles-title">Бицепс</h1>
-      <ul className="list-exercises-ul">{listExercises}</ul>
+      <div className="box-list-exercises-ul"><ul className="list-exercises-ul">{listExercises}</ul></div>
       <Link to={`/`} className="group-muscles-btn-back">
         <p className="group-muscles-btn-back-text">Выбрать другую группу мышц</p>
       </Link>
