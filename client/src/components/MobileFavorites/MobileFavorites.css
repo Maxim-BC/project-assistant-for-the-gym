@@ -1,17 +1,17 @@
 .show {
-  cursor:pointer;
+  cursor: pointer;
   width: 40px;
   height: 60px;
   opacity: 0.8;
   font-size: 20px;
-  background-color: #282c34;
+  background-color: #050505df;
   border-radius: 10px;
   border: solid 1px #282c34;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   right: 12px;
   top: 250px;
   position: fixed;
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -21,10 +21,10 @@
 }
 
 .mobile-favorites-back {
-  width: 30%;
+  width: 25%;
   cursor: pointer;
-  font-size: 17px;
-  background-color:rgb(212, 142, 13);
+  font-size: 12px;
+  background-color: rgb(212, 142, 13);
   color: white;
   border: rgb(212, 142, 13) 1px solid;
   border-radius: 10px;
@@ -41,9 +41,14 @@
   width: 80vw;
   left: 25px;
   min-width: 80px;
-  max-width: 550px;
+  max-width: 100%;
   border-radius: 15px;
 }
+
+.mobile-favorites-h2 {
+  font-size: 18px;
+}
+
 .mobile-favorites-list {
   margin: 3px 5px;
   margin-left: 0px;
@@ -59,20 +64,21 @@
   margin-bottom: 1px;
   display: flex;
   justify-content: flex-start;
-  width: 90%;
+  width: 98%;
   border: black solid 2px;
   align-items: stretch;
   height: 20%;
   min-width: 215px;
   font-weight: 600;
+  font-size: 10px;
 }
 
 .mobile-favorites-btn-save {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   background-color: rgb(52, 133, 72);
-  width: 120px;
-  height: 40px;
+  width: 100px;
+  height: 25px;
   border: rgb(212, 13, 13);
   cursor: pointer;
   border-radius: 10px;
@@ -95,9 +101,6 @@
   color: rgba(0, 0, 0, 0.281);
   background-color: rgba(212, 159, 13, 0.466);
   border: none;
-}
-.mobile-favorites-name-point {
-  width: 85%;
 }
 
 .mobile-favorites-box-btn {
@@ -143,6 +146,7 @@
   font-size: 15px;
   font-weight: 600;
   height: 100%;
+  font-size: 10px;
 }
 
 .mobile-favorites-quantity-exercises {

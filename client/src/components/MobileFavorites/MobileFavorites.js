@@ -85,7 +85,7 @@ function MobileFavorites({
         type="button"
         className="mobile-favorites-btn-save"
       >
-        Сохранить тренировку
+        Сохранить
       </button>
     ) : (
       <Link
@@ -103,7 +103,7 @@ function MobileFavorites({
   const windowMobileFavorites =
     btnOpenSaveList === "hide" ? (
       <div className="mobile-favorites">
-        <h2>Ваша тренировка</h2>
+        <h2 className="mobile-favorites-h2">Ваша тренировка</h2>
         <p className="mobile-favorites-quantity-exercises">
           Количество упражнений: {quantityItemFavorites}
         </p>
@@ -137,7 +137,6 @@ function MobileFavorites({
   return (
     <>
       <button onClick={() => openMenuSaveList()} className={btnOpenSaveList}>
-        <p>&#9776;</p>
         {quantityItemFavorites}
       </button>
       {windowMobileFavorites}

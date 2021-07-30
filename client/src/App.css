@@ -116,6 +116,7 @@ html {
   }
 
   .contacts-h2 {
+    font-size: 18px;
     padding-top: 3px;
     color: rgb(20, 20, 20);
     margin: 0;
@@ -133,7 +134,7 @@ html {
     padding: 5px;
     border-right: 10px #282c34 ridge;
     background-color: white;
-    width: 85%;
+    width: 95%;
   }
   .main-page {
     background-color: white;

@@ -42,19 +42,37 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-  .muscle-group-img {
-    height: 100px;
-    width: 100px;
+  .card-muscle-group {
+    background-color: rgb(41, 37, 37);
+    padding: 6px;
+    border: black 1px solid;
+    border-radius: 15px;
+    margin: 6px;
+    text-decoration: none;
+    color: black;
   }
 
+  .muscle-group-img {
+    min-height: 80px;
+    min-width: 80px;
+    height: 60%;
+    width: 60%;
+  }
+  .title-muscle-group {
+    color: white;
+    font-size: 18px;
+    margin: 6px;
+  }
   .box-cards {
     height: 100%;
     min-width: 150px;
     max-width: 600px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: flex-start;
-    margin: 0px 10px;
+    display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+    margin: 0px 6px;
   }
   .card-muscle-group {
     background-color: rgb(41, 37, 37);
@@ -64,5 +82,8 @@
     margin: 5px;
     text-decoration: none;
     color: black;
+    width: 70%;
+    height: 80%;
+    min-width: 90px;
   }
 }
