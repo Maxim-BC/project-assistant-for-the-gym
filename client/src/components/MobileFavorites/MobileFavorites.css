@@ -35,21 +35,27 @@
   border: 1px solid rgba(0, 8, 7);
   padding: 15px 7px;
   position: fixed;
-  max-width: 500px;
   background-color: rgb(249, 251, 227);
-  top: 100px;
-  width: 85vw;
-  left: 25px;
+  top: 0px;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+  margin: auto;
   min-width: 80px;
-  max-width: 100%;
+  width: 98%;
+  max-width: 421px;
   border-radius: 15px;
+  height: 70vh;
 }
 
 .mobile-favorites-h2 {
   font-size: 18px;
+  margin-top: 0px;
 }
 
 .mobile-favorites-list {
+  background-color: rgb(247, 251, 255);
+  border: solid 3px rgb(45, 50, 51);
   margin: 3px 5px;
   margin-left: 0px;
   list-style-type: none;
@@ -57,18 +63,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 65%;
+  height: 75%;
+  max-height: calc(75% - 100px);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .mobile-favorites-point {
   margin-bottom: 1px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   width: 98%;
   border: black solid 2px;
   align-items: stretch;
   height: 20%;
   min-width: 215px;
+  max-width: 370px;
   font-weight: 600;
   font-size: 10px;
 }
@@ -77,7 +87,8 @@
   font-size: 12px;
   font-weight: 600;
   background-color: rgb(52, 133, 72);
-  width: 100px;
+  width: 35%;
+  max-width: 300px;
   height: 25px;
   border: rgb(212, 13, 13);
   cursor: pointer;
@@ -86,7 +97,6 @@
   color: aliceblue;
   padding: 3px;
   margin: 3px;
-  margin: 8px;
 }
 .mobile-favorites-input-name {
   text-align: center;
@@ -108,11 +118,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100px;
 }
 
 .mobile-favorites-btn-delete {
   width: 100%;
-  height: 40%;
+  max-width: 60px;
   cursor: pointer;
   background-color: rgb(212, 142, 13);
   color: aliceblue;
@@ -141,7 +152,12 @@
   margin: 1px;
   padding: 1px;
 }
-
+.mobile-favorites-name-point {
+  max-width: 35%;
+  min-width: 88px;
+  line-height: 1;
+  margin: 0;
+}
 .mobile-favorites-number-point {
   font-size: 15px;
   font-weight: 600;
@@ -160,6 +176,8 @@
 }
 
 .mobile-favorites-link-workouts {
+  padding-top: 2px;
+  padding-bottom: 2px;
   margin-top: 8px;
 }
 
@@ -173,22 +191,22 @@
 .mobile-favorites-link-workouts {
   margin: 10px 5px 10px 5px;
   border-radius: 8px;
-  width: 80%;
-  min-width: 180px;
-  max-width: 200px;
+  width: 70%;
+  min-width: 160px;
+  max-width: 180px;
   height: 20px;
   text-decoration: none;
   background-color: rgb(212, 132, 3);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 14px;
   color: rgb(255, 255, 255);
   font-weight: 600;
 }
 
 .mobile-favorites-link-workouts:hover {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   color: rgb(255, 255, 255);
 }

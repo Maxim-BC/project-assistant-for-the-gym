@@ -30,11 +30,11 @@ function MobileFavorites({
           <li className="mobile-favorites-point" key={index}>
             <p className="mobile-favorites-name-point">{item.name}</p>
             <div className="mobile-favorites-box-number">
-              <p className="mobile-favorites-text-point">Кол-во подходов:</p>
+              <p className="mobile-favorites-text-point">Подходов:</p>
               <p className="mobile-favorites-number-point">{item.repeat}</p>
             </div>
             <div className="mobile-favorites-box-number">
-              <p className="mobile-favorites-text-point">Кол-во повторений:</p>
+              <p className="mobile-favorites-text-point">Повторений:</p>
               <p className="mobile-favorites-number-point">{item.approaches}</p>
             </div>
             <div className="mobile-favorites-box-btn">
@@ -52,6 +52,7 @@ function MobileFavorites({
   const deleteListAndNameList = (evt) => {
     setTittle("");
     deleteList();
+    setBtnOpenSaveList("show");
   };
   const createList = () => {
     let result = arrayFavorites.map((item) => item);
@@ -74,7 +75,7 @@ function MobileFavorites({
         type="button"
         className="mobile-favorites-btn-save"
       >
-        Создать новую тренировку
+        Создать новую
       </button>
     );
   const linkAndBtnSaveList =
@@ -93,7 +94,7 @@ function MobileFavorites({
         className="mobile-favorites-link-workouts"
         to={`/workouts/${idList}`}
       >
-        Перейти к вашей тренировке
+        Перейти к тренировке
       </Link>
     );
   const changeNameList = (evt) => {
