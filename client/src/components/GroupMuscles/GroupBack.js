@@ -64,7 +64,8 @@ function GroupBack({ addItem }) {
       name: "Шраги с гантелями",
       repeat: 0,
       approaches: 0,
-    },{
+    },
+    {
       id: 21,
       name: "Шраги со штангой",
       repeat: 0,
@@ -93,7 +94,8 @@ function GroupBack({ addItem }) {
       name: "Наклоны со штангой на плечах",
       repeat: 0,
       approaches: 0,
-    },  ]);
+    },
+  ]);
 
   const listExercises = (
     <>
@@ -106,9 +108,13 @@ function GroupBack({ addItem }) {
   return (
     <div className="box-exercises">
       <h1 className="group-muscles-title">Спина</h1>
-      <div className="box-list-exercises-ul"><ul className="list-exercises-ul">{listExercises}</ul></div>
+      <div className="box-list-exercises-ul">
+        <ul className="list-exercises-ul">{listExercises}</ul>
+      </div>
       <Link to={`/`} className="group-muscles-btn-back">
-        <p className="group-muscles-btn-back-text">Выбрать другую группу мышц</p>
+        <p className="group-muscles-btn-back-text">
+          Выбрать другую группу мышц
+        </p>
       </Link>
     </div>
   );
