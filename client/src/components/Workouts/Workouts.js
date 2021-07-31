@@ -45,7 +45,9 @@ function Workouts() {
     <div className="box-exercises">
       <div className="workouts-box">
         <h2 className="title-workouts">Тренировка:"{title}"</h2>
-        <ul className="workouts-ul-list">{arrayExercises}</ul>
+        <div className="workouts-box-list-exercises-ul">
+          <ul className="workouts-ul-list">{arrayExercises}</ul>
+        </div>
         <div className="workouts-box-btn-back">
           <Link to={`/`} className="workouts-btn-back">
             <button className="workouts-btn-back-text">

@@ -44,6 +44,7 @@ function Favorites({
   const deleteListAndNameList = (evt) => {
     setTittle("");
     deleteList();
+    setIdList("");
   };
   const createList = () => {
     let result = arrayFavorites.map((item) => item);
@@ -56,6 +57,8 @@ function Favorites({
   };
   const createNewList = () => {
     setIdList("");
+    deleteList();
+    setTittle("");
   };
   const btnAddNewWorkouts =
     idList === "" ? (

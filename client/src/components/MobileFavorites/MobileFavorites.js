@@ -52,6 +52,7 @@ function MobileFavorites({
   const deleteListAndNameList = (evt) => {
     setTittle("");
     deleteList();
+    setIdList("");
     setBtnOpenSaveList("show");
   };
   const createList = () => {
@@ -64,7 +65,10 @@ function MobileFavorites({
       .catch((err) => console.error(err));
   };
   const createNewList = () => {
+    setTittle("");
     setIdList("");
+    deleteList();
+    setBtnOpenSaveList("show");
   };
   const btnAddNewWorkouts =
     idList === "" ? (
