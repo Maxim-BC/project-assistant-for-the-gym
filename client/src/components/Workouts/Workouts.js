@@ -32,7 +32,7 @@ function Workouts() {
             №{index + 1}
             <h3 className="workouts-name-exercise">{data.name_exercise}</h3>
             <p className="workouts-list-exercises-label-text">
-              Кол-во подходов: {data.approaches_exercise}
+              Кол-во повторений: {data.approaches_exercise}
             </p>
             <p className="workouts-list-exercises-label-text">
               Кол-во подходов: {data.repeat_exercise}
