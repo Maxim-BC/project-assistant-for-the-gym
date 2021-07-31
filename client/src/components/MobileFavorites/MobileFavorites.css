@@ -8,13 +8,11 @@
   border-radius: 10px;
   border: solid 1px #282c34;
   color: rgb(255, 255, 255);
-  right: 12px;
-  top: 250px;
-  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
+  position: fixed;
 }
 .hide {
   display: none;
@@ -153,7 +151,7 @@
   padding: 1px;
 }
 .mobile-favorites-name-point {
-  max-width: 35%;
+  width: 35%;
   min-width: 88px;
   line-height: 1;
   margin: 0;

@@ -93,7 +93,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   height: 100%;
   width: 100%;
 }
@@ -171,6 +171,7 @@
     margin: auto;
     list-style-type: none;
     padding-left: 0px;
+    max-height: calc(68vh - 100px);
   }
 
   .list-exercises-li-name {
@@ -201,6 +202,16 @@
     border-radius: 5px;
     border: solid 1px rgb(255, 255, 255);
     color: aliceblue;
+    padding: 3px;
+    margin: 3px;
+  }
+
+  .add-button:disabled {
+    font-size: 12px;
+    font-weight: 600;
+    width: 70px;
+    border-radius: 5px;
+    border: solid 1px rgb(255, 255, 255);
     padding: 3px;
     margin: 3px;
   }
