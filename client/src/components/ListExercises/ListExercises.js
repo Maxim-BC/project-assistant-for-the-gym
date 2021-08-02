@@ -6,12 +6,16 @@ function ListExercises({ item, index, addItem }) {
   const [numberRepeat, setNumberRepeat] = useState("");
 
   const changeNumberApproaches = (e) => {
-    if (199 > e.target.value && e.target.value > 0 && e.target.value !== "-") {
+    if (199 > e.target.value && e.target.value > -1 && e.target.value !== "-") {
       setNumberApproaches(e.target.value);
     } else return;
   };
   const changeNumberRepeat = (e) => {
-    if (1999 > e.target.value && e.target.value > 0 && e.target.value !== "-") {
+    if (
+      1999 > e.target.value &&
+      e.target.value > -1 &&
+      e.target.value !== "-"
+    ) {
       setNumberRepeat(e.target.value);
     } else return;
   };
@@ -47,7 +51,12 @@ function ListExercises({ item, index, addItem }) {
       <div className="list-exercises-box-btn-add">
         <button
           type="button"
-          disabled={!numberRepeat || !numberApproaches}
+          disabled={
+            !numberRepeat ||
+            !numberApproaches ||
+            numberApproaches < 1 ||
+            numberRepeat < 1
+          }
           onClick={() => addItem(item, numberRepeat, numberApproaches)}
           className="add-button"
         >
