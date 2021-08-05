@@ -1,5 +1,4 @@
 export async function registerList(nameList, exercises) {
-  console.log(nameList, exercises);
   const response = await fetch("/api/workouts/create", {
     method: "POST",
     headers: {
